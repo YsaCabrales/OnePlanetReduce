@@ -3,7 +3,7 @@ const router = express.Router();
 const {
     getAllItems,
     getItem
-} = require("../controllers/courseController");
+} = require("../controllers/ItemController");
 
 router.get('/', getAllItems);
 router.get('/:id', getItem);

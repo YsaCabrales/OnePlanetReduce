@@ -32,16 +32,12 @@ const itemSchema = new mongoose.Schema({
     type: String, 
     required: true,
   },
-  ecoFriendlyAlternatives: {
+  ecoAlternatives: {
     name: [String], 
     default: [],
-  },
-  environmentalImpactScore: {
-    type: Number,
-    required: true,
   }
 });
 
-const Item = mongoose.model("Item", itemSchema);
+const Item = mongoose.model("products", itemSchema);
 
 module.exports = Item;

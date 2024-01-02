@@ -4,6 +4,10 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+// Routes
+app.use("/api/products", require("./src/routes/ItemRoute"));
+app.use("/api/tips", require("./src/routes/LifestyleTipRoute"));
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {

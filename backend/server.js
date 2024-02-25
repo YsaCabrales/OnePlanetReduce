@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+//Middlewares
+app.use(express.json());
+
 // Routes
 app.use("/api/products", require("./src/routes/ItemRoute"));
 app.use("/api/tips", require("./src/routes/LifestyleTipRoute"));
